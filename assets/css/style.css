@@ -20,8 +20,8 @@
 
 .main {
   display: flex;
-  justify-content: space-around;
-  padding: 3rem 8rem;
+  /* justify-content: space-around; */
+  padding: 0 3rem 0 8rem;
 }
 
 .heading {
@@ -35,7 +35,7 @@
 }
 
 .content {
-  width: 70%;
+  width: 80%;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   text-align: justify;
@@ -58,4 +58,10 @@
 
 .cta img {
   height: 30px;
+}
+
+.hero-img {
+  /* width: 60%;
+  background: url(../img/lady.svg) no-repeat;
+  background-size: 100% 100%; */
 }
