@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -19,4 +21,14 @@
 .main {
   display: flex;
   justify-content: space-around;
+}
+
+.heading {
+  font-family: "Libre Baskerville", serif;
+  font-size: 96px;
+  color: rgba(0, 45, 48, 0.5);
+}
+
+.heading span {
+  color: #ff6f00;
 }
