@@ -1,12 +1,18 @@
 
+const arrayAkanMale = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
+const arrayAkanFemale = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
 // Collecting data from input
-buttonRead = () => {
     function getDate() {
         let dateInput = document.getElementById('dob').value;
         console.log(dateInput);
+        male = document.getElementById('maleRadio');
+        female = document.getElementById('femaleRadio');
     
         if(dateInput == '') {
             alert('Please enter a valid date');
+        } else if (male.checked==false && female.checked==false) {
+            alert('Please select gender');
+            
         } else {
     
                 // Parsing the date
@@ -34,33 +40,29 @@ buttonRead = () => {
     
                 // Getting day of the week
                 d = date.getDay();
-                console.log(d);
-    
-                return d;
-    
-                // d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
-                // console.log(d);
+                dd = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+                console.log(d);             
+                
+                    return d;
         }
     }
-        console.log(getDate());
     
-       const arrayAkanMale = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
-       const arrayAkanFemale = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
-    
-        male = document.getElementById('maleRadio');
-        female = document.getElementById('femaleRadio');
+        validate = () => {
+        getDate();
         if(male.checked) {
             console.log(arrayAkanMale[d]);
-            console.log(date.toLocaleString('en-us', {weekday : 'long'}));
-    
+            document.getElementById("display").innerHTML =`Your Akan Name is ` + `<span>` + arrayAkanMale[d] + `</span>` + `<br>` + `It means a Male born on ` + date.toLocaleString('en-us', {weekday : 'long'});
         }
-        else if(female.checked) {
+        else if (female.checked) {
             console.log(arrayAkanFemale[d]);
-            console.log(date.toLocaleString('en-us', {weekday : 'long'}));
+            document.getElementById("display").innerHTML =`Your Akan Name is ` + arrayAkanFemale[d] + `<br>` + `It means a Female born on ` + date.toLocaleString('en-us', {weekday : 'long'});
         }
-        else {
-            alert('Please select gender');
-        }
-    
-    
     }
+    
+       
+
+
+buttonRead = () => {
+       validate(); 
+    }
+    
