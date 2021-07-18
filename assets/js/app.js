@@ -59,10 +59,7 @@ const arrayAkanFemale = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Am
         }
     }
     
-       
-
-
-buttonRead = () => {
+    buttonRead = () => {
        validate(); 
     }
     
