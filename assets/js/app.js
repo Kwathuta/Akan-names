@@ -46,7 +46,7 @@ const arrayAkanFemale = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Am
                     return d;
         }
     }
-    
+
         validate = () => {
         getDate();
         if(male.checked) {
@@ -55,7 +55,7 @@ const arrayAkanFemale = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Am
         }
         else if (female.checked) {
             console.log(arrayAkanFemale[d]);
-            document.getElementById("display").innerHTML =`Your Akan Name is ` + arrayAkanFemale[d] + `<br>` + `It means a Female born on ` + date.toLocaleString('en-us', {weekday : 'long'});
+            document.getElementById("display").innerHTML =`Your Akan Name is ` + `<span>` + arrayAkanFemale[d] + `</span>` + `<br>` + `It means a Female born on ` + date.toLocaleString('en-us', {weekday : 'long'});
         }
     }
     
