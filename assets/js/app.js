@@ -5,12 +5,12 @@ const arrayAkanFemale = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Am
     function getDate() {
         let dateInput = document.getElementById('dob').value;
         console.log(dateInput);
-        male = document.getElementById('maleRadio');
+        male = document.getElementById('maleRadio'); // collecting from male radio
         female = document.getElementById('femaleRadio');
     
         if(dateInput == '') {
             alert('Please enter a valid date');
-        } else if (male.checked==false && female.checked==false) {
+        } else if (male.checked == false && female.checked == false) {
             alert('Please select gender');
             
         } else {
@@ -40,7 +40,7 @@ const arrayAkanFemale = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Am
     
                 // Getting day of the week
                 d = date.getDay();
-                dd = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+                D = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
                 console.log(d);             
                 
                     return d;
@@ -62,4 +62,3 @@ const arrayAkanFemale = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Am
     buttonRead = () => {
        validate(); 
     }
-    
